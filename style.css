@@ -1,0 +1,159 @@
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", serif;
+}
+
+.container{
+    text-align: center;
+    background-color: #3D8D7A;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.header{
+    font-family: "Protest Guerrilla", serif;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #493D9E;
+}
+
+.main-balance{
+    background-color: #B3D8A8;
+    width: 150px;
+
+    height: 150px;
+    max-height: 35%;
+    margin: auto;
+    border-radius: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.balance-text{
+    font-size: .75rem;
+    margin-bottom: .25rem;
+}
+
+.total-balance{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #000957;
+}
+
+.sub-balance{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 15px;
+    gap: 1rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    font-weight: normal;
+    background-color: #A3D1C6;
+    border-radius: 10px;
+}
+
+.income-text,
+.expense-text{
+    font-size: .75rem;
+    margin-bottom: .5rem;
+}
+
+.expense-balance{
+    color: #E52020;
+}
+
+.income-balance{
+    color: #5CB338;
+}
+
+
+input{
+    display: block;
+    width: 100%;
+    font-size: .85rem;
+    padding: .5rem;
+    margin: .5rem 0;
+    outline: none;
+    border: none;
+    border-radius: 15px;
+}
+label{
+    display: block;
+    text-align: left;
+    font-size: .85rem;
+}
+
+.history-text{
+    text-align: left;
+    font-size: 1.25rem;
+    margin-bottom: .5rem;
+}
+
+.history{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #33372C;
+    padding: .5rem;
+    border-radius: 10px;
+    margin-bottom: .25rem;
+    font-size: .8rem;
+}
+
+.income-color{
+    background-color: #47ff47;
+}
+.expense-color{
+    background-color: #ff4747;
+}
+
+.transaction-header{
+    text-align: left;
+    font-size: 1.25rem;
+    margin: .75rem 0;
+}
+
+.add-transaction{
+    background-color: #493D9E;
+    text-transform: uppercase;
+    color: white;
+    border: none;
+    font-weight: bold;
+    padding: .5rem;
+    border-radius: 15px;
+    margin-top: 1rem;
+}
+
+.in-ex{
+    display: block;
+    margin: 0 auto;
+    outline: none;
+    margin-top: 1.25rem;
+    padding: .5rem;
+    border-radius: 20px;
+}
+
+.shake{
+    animation: shake .3s ease-in 1;
+}
+
+@keyframes shake {
+    0%{transform: translate(5px, 7px);}
+    25%{transform: translate(3px, 9px);}
+    50%{transform: translate(15px, 3px);}
+    75%{transform: translate(9px, 5px);}
+    100%{transform: translate(0px, 0px);}
+}

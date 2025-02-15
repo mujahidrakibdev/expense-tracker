@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mujahid's Expense Tracker</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">Expense Tracker</h1>
+        <div class="main-balance">
+            <p class="balance-text">MAIN BALANCE</p>
+            <h3 class="total-balance">$0.00</h3>
+        </div>
+
+        <div class="sub-balance">
+            <div class="income">
+                <p class="income-text">INCOME</p>
+                <p class="income-balance">$0.00</p>
+            </div>
+            <div class="expense">
+                <p class="expense-text">EXPENSE</p>
+                <p class="expense-balance">$0.00</p>
+            </div>
+        </div>
+
+        <div class="history-container"></div>
+
+        <div class="transaction-container">
+            <h3 class="transaction-header">Add new transaction</h3>
+            <form action="" class="transaction-form">
+                <label for="name">Name</label>
+                <input type="text" class="name-input" id="name" placeholder="Enter Name" autocomplete="off">
+                <label for="amount">Amount</label>
+                <input type="number" class="amount-input" id="amount" placeholder="Enter Amount" autocomplete="off">
+                <select name="in-ex" id="in-ex" class="in-ex">
+                    <option value="income" class="income">Income</option>
+                    <option value="expense" class="expense">Expense</option>
+                </select>
+                <button class="add-transaction">Add Transaction</button>
+            </form>
+        </div>
+
+
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
