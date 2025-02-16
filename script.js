@@ -8,10 +8,11 @@ const incomeBalance = document.querySelector(".income-balance")
 const expenseBalance = document.querySelector(".expense-balance")
 const container = document.querySelector(".container")
 
-let historyArr = []
 let totalIncome = 0
 let totalExpense = 0
 
+let historyArr = getLocal()
+addHistory()
 
   
 addButton.addEventListener("click", function (e) {
@@ -48,15 +49,17 @@ addButton.addEventListener("click", function (e) {
         "name" : nameInput.value.trim(),
         "amount" : amountInput.value,
         "inOrEx" : inOrEx.value
-
     })
 
-    localStorage.setItem("historyArr", historyArr)
+    saveLocal()
+    addHistory()
     
+})
+
+function addHistory() {
 
 
     historyArr.forEach(function (history) { 
-        
 
         const historyDiv = document.createElement("div")
         historyDiv.className = "history"
@@ -72,11 +75,7 @@ addButton.addEventListener("click", function (e) {
             historyDiv.classList.add("expense-color")
             totalExpense += Number(history.amount)
             expenseBalance.innerText = `$${totalExpense}`
-
         }
-
-
-
 
 
         historyContainer.append(historyDiv)
@@ -85,4 +84,13 @@ addButton.addEventListener("click", function (e) {
     totalBalance.innerText = `$${totalIncome - totalExpense}`
     nameInput.value = ""
     amountInput.value = ""
-})
+}
+
+function saveLocal() {
+    let historyJson = JSON.stringify(historyArr)
+    localStorage.setItem("historyArr", historyJson)
+}
+
+function getLocal() {
+    return JSON.parse(localStorage.getItem("historyArr")) || []
+}
