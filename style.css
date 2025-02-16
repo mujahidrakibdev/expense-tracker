@@ -10,6 +10,9 @@ body{
     justify-content: center;
     align-items: center;
     font-family: "Roboto", serif;
+    background: url(background.webp) no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 .container{
